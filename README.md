@@ -1,7 +1,7 @@
 
-*** By Lisa Lou AEH ***  
+***By Lisa Lou AEH***  
 ## My Little Weather App with React  
-===================================  
+    
 This Small project is my first one with react.  
   
   
