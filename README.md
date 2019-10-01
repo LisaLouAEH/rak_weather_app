@@ -1,9 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## My Little Weather App with React
+This Small project is my first on in react
 
+## React Man
 In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.<br>
