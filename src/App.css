@@ -1,24 +1,116 @@
-/* default style from react 
-  .App {
-    text-align: center;
-  }
 
-  .App-logo {
-    height: 40vmin;
-  }
+body {
+  font-family: "Open Sans", sans-serif;
+}
 
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px #f16051;
+  padding-bottom: 4px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+}
 
-  .App-link {
-    color: #09d3ac;
-  } 
-*/
+input[type="text"] { 
+    outline: none;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #404040 !important;
+    -webkit-text-fill-background-color: white !important;
+}
+
+button:active {
+  outline: none;
+}
+
+.weather__info {
+  width: 60%;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.weather__key {
+  color: #f16051;
+  border-bottom: solid 2px rgba(255,255,255,0.06);
+  padding: 20px 0 20px 0;
+  font-weight: 400;
+}
+
+.weather__key:last-child {
+  border: 0;
+}
+
+.weather__value {
+  color: #A6A6A6;
+  font-weight: 600;
+}
+
+.weather__error {
+  color: red;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+button{
+  border: 0;
+  border-radius: 2px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 100;
+  max-height: 50px;
+  margin: 0 5px;
+  padding: 15px;
+  background-color: #f16051;
+  color: white;
+}
+button:hover{
+  background-color: white;
+  border: solid 1px #f16051;
+  color: #f16051;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.main__container{
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.container-fluid{
+  justify-content: space-between;
+  background-color: #066ab0;
+}
+.main__title{
+  margin: 1%;
+  color: white;
+  
+}
+.main__menu{
+  margin: 2%;
+}
+.setting_block{
+  background-color: white;
+  border: solid 2px #f16051;
+  border-radius: 10px;
+  padding: 2%;
+  margin: 5%;
+}
+.footer__container{
+  background-color: #066ab0;
+  text-align: center;
+  color: white;
+}

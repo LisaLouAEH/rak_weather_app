@@ -1,15 +1,32 @@
-// this file displays weather values to the screen
+// file displays weather values to the screen
 import React from 'react'
-
 
 const Weather=(props)=>{
     return(
         // put weather condition inside the div block
         <div>
-            {props.country && props.city && <p>Location: {props.city},    {props.country}</p>}
-            {props.temperature && <p>Temperature: {props.temperature}</p>}
-            {props.description && <p>Conditions:  {props.description}</p>}
-            {props.error && <p>{props.error}</p>}
+            {
+                props.country && props.city && <p className="weather__key">Location: 
+                    <span className="weather__value">  {props.city}, {props.country}</span>                    
+                </p> 
+            }
+            
+            {
+                props.temperature && <p className="weather__key">Temperature: 
+                    <span className="weather__value">  {props.temperature}</span>
+                </p>
+            }
+
+            {
+                props.description && <p className="weather__key">Conditions:  
+                    <span className="weather__value">  {props.description}</span>
+                </p>
+            }
+
+            {
+                props.error && <p className="weather__error">{props.error}</p>
+            }
+
         </div>
     )
 }
