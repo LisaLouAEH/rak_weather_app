@@ -1,3 +1,4 @@
+// this files displays titles and notice to the screen
 import React from 'react'
 
 const Titles = (props) =>{

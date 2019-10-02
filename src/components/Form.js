@@ -1,3 +1,4 @@
+// this file displays the setting form to the screen
 import React from 'react'
 
 const Form = props =>{
