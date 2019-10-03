@@ -8,6 +8,7 @@ import Weather from './components/Weather';
 import Footer from './components/Footer';
 import Liste from './components/Liste';
 import Widget from './components/Widget';
+import './style/Widget.css';
 
 class App extends React.Component{
     // the default states is empty array to store every cities the user wishing to know the weather
@@ -43,11 +44,11 @@ class App extends React.Component{
             {city: response.name,
             country: response.sys.country,
             temperature: response.main.temp,
-            description: response.weather[0].description,
+            description: response.weather[0].main,
             icon: response.weather[0].icon,
             error: ""}
             )
-        console.log(tempListe);
+        console.log("le tableau que je recup: "+tempListe);
         this.setState({liste:tempListe})
       }else{
           this.setState({
@@ -60,49 +61,55 @@ class App extends React.Component{
     render(){
 
         if(this.state.home){
+            console.log("home ?");
             return(
                 <div className="main__container column">
+{/* DISPLAY THE HEADER*/}
                     <div className="container-fluid row">
                         <div className="main__title">
                             <Titles />
                         </div>
                         <div className="main__menu row">
-                            <button onClick={this.navigationHandler}> Home </button>
-                            <button onClick={this.navigationHandler}> Settings </button>
+                            <button className="menu_button"  onClick={this.navigationHandler}> Settings </button>
                         </div>
                     </div>
-                    <div className="setting_block column">
-                        <Form loadWeather={() => this.getWeather}/>
-                        
-                        {/* <Weather 
-                            city={this.state.city}
-                            country={this.state.country}
-                            temperature={this.state.temperature}
-                            description={this.state.description}
-                            error={this.state.error}
-                        />  */}
+
+{/* DISPLAY in HOME as many weather widget that the user entered in the setting form*/}
+                    <div className="row">
+                        {this.state.liste.map( element => <Widget cityName={element.city} cityTemp={element.temperature} cityCountry={element.country}/>)} 
                     </div>
-                    <Liste cities={this.state.liste}/>
-                    {this.state.liste.map( element => <Widget cityName={element.city} cityTemp={element.temperature} cityCountry={element.country}/>)} 
+{/* DISPLAY THE FOOTER*/}
                     <div className="footer__container container-fluid">
                         <Footer/>
                     </div>
                 </div>               
             )
         }else{
+            console.log("settings ?");
             return(
                 <div className="main__container column">
+{/* DISPLAY THE HEADER*/}
                     <div className="container-fluid row">
                         <div className="main__title">
                             <Titles />
                         </div>
                         <div className="main__menu row">
-                            <button onClick={this.navigationHandler}> Home </button>
-                            <button onClick={this.navigationHandler}> Settings </button>
+                            <button  className="menu_button"  onClick={this.navigationHandler}> Show  me weather </button>
+                            {/* <button onClick={this.navigationHandler}> Settings </button> */}
                         </div>
                     </div>
-                    
-                    Settings
+{/* DISPLAY THE SETTING FORM*/}
+                    <div className="setting_block column">
+                        <Form loadWeather={() => this.getWeather}/>
+                    </div>
+
+{/* DISPLAY THE user choices list*/}
+                    <Liste cities={this.state.liste}/>
+
+{/* DISPLAY THE FOOTER*/}
+                    <div className="footer__container container-fluid">
+                        <Footer/>
+                    </div>
                 </div>               
             )
         }        

@@ -9,7 +9,7 @@ const Liste = (props) =>{
                     <div>
                         <span className="weather__value"> Ville: {element.city}</span>
                         <span className="weather__value"> Pays: {element.country}</span>
-                        <button>X</button>       
+                        <button className="delete_button">X</button>       
                     </div>)
             })}
         </div>

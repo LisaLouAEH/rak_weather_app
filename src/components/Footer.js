@@ -5,7 +5,7 @@ const Footer = (props) =>{
     return(
         <div>
             <p></p>
-            <p>Footer section to field later... </p>
+            <p>made with love by ... <a href="https://www.linkedin.com/in/lisalouaeh/">Lisa Lou AEH</a> </p>
         </div>
     )
 }

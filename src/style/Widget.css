@@ -1,0 +1,26 @@
+.widget_container{
+    min-width: 200px;
+    min-height: 200px;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 5%;
+    margin: 0px 20px;
+    color: white !important;
+    justify-content: center;
+    background-color: rgba(153, 177, 191, 0.3);
+}
+.weather__value{
+    align-items: stretch;
+}
+.weather__value.h3{
+    font-size: 16px;
+}
+
+.weather__info {
+    background-color: red;
+    margin: 0px 10px;
+    padding: 10px;
+    font-size: 18px !important;
+  }
+ 
+  

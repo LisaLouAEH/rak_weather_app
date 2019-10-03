@@ -4,10 +4,10 @@ import React from 'react'
 const Form = props =>{
     return(
         
-        <form class="column" onSubmit={props.loadWeather()}>
+        <form className="column" onSubmit={props.loadWeather()}>
             <input type="text" name="city" placeholder="city..."/>
             <input type="text" name="country" placeholder="country..."/>
-            <button>Get Weather!</button>
+            <button className="valid_button">Add to the list</button>
         </form>
     )
 }

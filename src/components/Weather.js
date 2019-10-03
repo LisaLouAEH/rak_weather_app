@@ -6,25 +6,40 @@ const Weather=(props)=>{
         // put weather condition inside the div block
         <div>
             {
-                props.country && props.city && <p className="weather__key">Location: 
-                    <span className="weather__value">  {props.city}, {props.country}</span>                    
+                props.country && props.city && 
+                <p className="weather__key">
+                    Location: 
+                    <p className="weather__value">  
+                        {props.city}, {props.country}
+                    </p>                    
                 </p> 
             }
             
             {
-                props.temperature && <p className="weather__key">Temperature: 
-                    <span className="weather__value">  {props.temperature}</span>
+                props.temperature && 
+                <p className="weather__key">
+                    Temperature: 
+                    <p className="weather__value">  
+                        {props.temperature}
+                    </p>
                 </p>
             }
 
             {
-                props.description && <p className="weather__key">Conditions:  
-                    <span className="weather__value">  {props.description}</span>
+                props.main && 
+                <p className="weather__key">
+                    Conditions:  
+                    <p className="weather__value">  
+                        {props.main}
+                    </p>
                 </p>
             }
 
             {
-                props.error && <p className="weather__error">{props.error}</p>
+                props.error && 
+                <p className="weather__error">
+                    {props.error}
+                </p>
             }
 
         </div>
