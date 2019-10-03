@@ -8,6 +8,8 @@ import Weather from './components/Weather';
 import Footer from './components/Footer';
 import Liste from './components/Liste';
 import Widget from './components/Widget';
+import ApiKey from './components/ApiKey';
+
 import './style/Widget.css';
 
 class App extends React.Component{
@@ -30,7 +32,7 @@ class App extends React.Component{
       e.preventDefault();
       const city = e.target.elements.city.value;
       const country = e.target.elements.country.value;
-      const api_key = "c111b3ab497e9f938496993bd1fd882c";
+        const api_key = ApiKey;
       
       // call the API key to get the datas
       const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${api_key}`);
