@@ -6,7 +6,8 @@ This Small project is my first one with react.
   
   
 ## How to use it ?  
-In the project directory, you can run: 
+First of all, please clone the repo.  
+Then in the project directory, you can run: 
 ##### `npm install`  
 Will install the App dependancies noticed in the package.json   
   
