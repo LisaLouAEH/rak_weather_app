@@ -27,7 +27,7 @@ const Widget = (props) => {
 
         <div className="weather__value row"> 
           <div className="Weather_info">
-            <h3>Temp °:</h3>
+            <h3>Temp F°:</h3>
           </div>
 
           <div className="Weather_info">

@@ -1,10 +1,10 @@
 .widget_container{
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 300px;
+    min-height: 300px;
     align-items: flex-start;
     font-size: 20px;
-    padding: 5%;
-    margin: 0px 20px;
+    padding: 10%;
+    margin: 20px;
     color: white !important;
     justify-content: center;
     background-color: rgba(153, 177, 191, 0.3);
@@ -17,10 +17,14 @@
 }
 
 .weather__info {
-    background-color: red;
+    background-color: red !important;
     margin: 0px 10px;
-    padding: 10px;
+    padding: 2%;
     font-size: 18px !important;
   }
+
+.weather__info.p{
+    color: #F5E37A !important;
+}
  
   
