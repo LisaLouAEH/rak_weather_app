@@ -9,8 +9,7 @@ import Footer from './components/Footer';
 import Liste from './components/Liste';
 import Widget from './components/Widget';
 import ApiKey from './components/ApiKey';
-
-import './style/Widget.css';
+import './css/Widget.css';
 
 class App extends React.Component{
     // the default states is empty array to store every cities the user wishing to know the weather
@@ -46,7 +45,7 @@ class App extends React.Component{
             {city: response.name,
             country: response.sys.country,
             temperature: response.main.temp,
-            description: response.weather[0].main,
+            description: response.weather[0].description,
             icon: response.weather[0].icon,
             error: ""}
             )
